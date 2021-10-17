@@ -1,6 +1,6 @@
 let actions = {
 
-    getAll({ }, request) {
+    getAll({}) {
         return new Promise((resolve, reject) => {
             window.axios
                 .get(`divisions`)
@@ -13,10 +13,10 @@ let actions = {
         });
     },
 
-    show({ }, params) {
+    show({ }, id) {
         return new Promise((resolve, reject) => {
             window.axios
-                .get(`${params.api}/${params.id}`)
+                .get(`divisions/${id}`)
                 .then(response => {
                     resolve(response);
                 })
@@ -26,10 +26,10 @@ let actions = {
         });
     },
 
-    save({ }, params) {
+    save({ }, data) {
         return new Promise((resolve, reject) => {
             window.axios
-                .post(`${params.api}`, params.inputs)
+                .post(`divisions`, data)
                 .then(response => {
                     resolve(response);
                 })
@@ -38,11 +38,24 @@ let actions = {
                 });
         });
     },
-    delete({ }, params) {
-        console.log(params);
+
+    update({ }, data) {
         return new Promise((resolve, reject) => {
             window.axios
-                .delete(`${params.api}`, params.id)
+                .put(`divisions/${data.id}`, data)
+                .then(response => {
+                    resolve(response);
+                })
+                .catch(error => {
+                    reject(error);
+                });
+        });
+    },
+
+    remove({ }, id) {
+        return new Promise((resolve, reject) => {
+            window.axios
+                .delete(`divisions/${id}`)
                 .then(response => {
                     resolve(response);
                 })
