@@ -1,26 +1,21 @@
 <template>
   <div class="divisions">
-      <h1>الأقسام</h1>
-      <ul>
-        <li v-for="(item, index) in list" :key="index">
-          {{ item.name }}
-
-          <a @click="edit(item.id)" style="margin:0 5px">تعديل</a>
-          <a @click="remove(item.id)"  style="margin:0 5px">حذف</a>
-
-
-        </li>
-      </ul>
-
-      <h2>إضافة قسم</h2>
-       <button @click="clearData">جديد</button>
-       <br>
-       <br>
-      <div>
-        <input placeholder="أدخل الاسم" type="text" v-model="formData.name" />
-        <br><br>
-        <button v-if="formData.id>0" @click="update">تحديث</button>
-        <button v-else @click="save">حفظ</button>
+      <div class="container mt-5">
+        <h1>الأقسام</h1>
+        <ul>
+          <li v-for="(item, index) in list" :key="index">
+            {{ item.name }}
+            <a @click="edit(item.id)" style="margin:0 5px">تعديل</a>
+            <a @click="remove(item.id)"  style="margin:0 5px">حذف</a>
+          </li>
+        </ul>
+       <h2 class="mt-5">إضافة قسم</h2>
+        <button class="btn btn-secondary mt-3" @click="clearData">جديد</button>
+        <div class="mt-3">
+          <input class="form-control mt-3" placeholder="أدخل الاسم" type="text" v-model="formData.name" />
+          <button class="btn btn-primary mt-3" v-if="formData.id>0" @click="update">تحديث</button>
+          <button class="btn btn-primary mt-3" v-else @click="save">حفظ</button>
+        </div>
       </div>
 
   </div>
