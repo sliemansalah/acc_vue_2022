@@ -1,7 +1,26 @@
 <template>
+
   <div class="divisions">
-      <div class="container mt-5">
-        <h1>الأقسام</h1>
+
+    <div class="sub-header-container">
+        <header class="header navbar navbar-expand-sm">
+            <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom">
+                <i class="las la-bars"></i>
+            </a>
+            <ul class="navbar-nav flex-row">
+                <li>
+                    <div class="page-header">
+                        <nav class="breadcrumb-one" aria-label="breadcrumb">
+                            <BreadCrumb title="ثوابت النظام"  subTitle="الأقسام"/>
+                        </nav>
+                    </div>
+                </li>
+            </ul>
+        </header>
+      </div>
+
+
+      <h2 class="mt-4 mr-4 ml-4">الأقسام</h2>
         <ul>
           <li v-for="(item, index) in list" :key="index">
             {{ item.name }}
@@ -16,14 +35,14 @@
           <button class="btn btn-primary mt-3" v-if="formData.id>0" @click="update">تحديث</button>
           <button class="btn btn-primary mt-3" v-else @click="save">حفظ</button>
         </div>
-      </div>
-
   </div>
 </template>
 
 <script>
+import BreadCrumb from '@/components/template/BreadCrumb.vue';
 export default {
   name: 'Divisions',
+  components: {BreadCrumb},
   data() {
     return {
       list: [],
@@ -68,7 +87,10 @@ export default {
     }
   },
   created() {
+    $(document).ready(function() {
+      App.init();
+    });
     this.initData();
-  }
+  },
 }
 </script>

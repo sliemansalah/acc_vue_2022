@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'Cairo';
+    src: url('../../../fonts/Cairo-Light.ttf');
+}
 html {
-    direction: rtl
+    direction: rtl;
+}
+* {
+    font-family: 'Cairo';
 }
 .navbar .theme-brand {
     padding: 0.9px 27px 0.9px 0px!important;

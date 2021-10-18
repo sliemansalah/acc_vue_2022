@@ -111,24 +111,6 @@ var App = function() {
         },
     }
     var inBuiltfunctionality = {
-        mainCatActivateScroll: function() {
-            const ps = new PerfectScrollbar('.menu-categories', {
-                wheelSpeed:.5,
-                swipeEasing:!0,
-                minScrollbarLength:40,
-                maxScrollbarLength:300,
-                suppressScrollX : true
-            });
-            ps.isRtl = false;       
-            const vs = new PerfectScrollbar('.rightbar-tab', {
-                wheelSpeed:.5,
-                swipeEasing:!0,
-                minScrollbarLength:40,
-                maxScrollbarLength:300,
-                suppressScrollX : true
-            });
-            vs.isRtl = false;       
-        },
         preventScrollBody: function() {
             $('#sidebar').bind('mousewheel DOMMouseScroll', function(e) {
                 var scrollTo = null;
@@ -303,7 +285,6 @@ var App = function() {
             // Note : -  _mobileResolution -> onResize | Uncomment it if need for onresize functions for DESKTOP RESOLUTION i.e. below or equal to 991px |
             // _mobileResolution.onResize();
             sidebarFunctionality();
-            inBuiltfunctionality.mainCatActivateScroll();
             inBuiltfunctionality.preventScrollBody();
             inBuiltfunctionality.functionalDropdown();
         }
