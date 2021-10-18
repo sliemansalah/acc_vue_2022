@@ -4,12 +4,12 @@
         <header class="header navbar navbar-expand-sm">
             <ul class="navbar-item theme-brand flex-row  text-center">
                 <li class="nav-item theme-logo">
-                    <a href="index.html">
+                    <a href="#">
                         <img src="rtl/assets/img/logo.png" class="navbar-logo" alt="logo">
                     </a>
                 </li>
                 <li class="nav-item theme-text">
-                    <a href="index.html" class="nav-link"> Xato </a>
+                    <a href="#" class="nav-link"> Xato </a>
                 </li>
             </ul>
             <ul class="navbar-item flex-row ml-md-0 ml-auto">
@@ -116,14 +116,14 @@
                             <img src="rtl/assets/img/flag/usa-flag.png" class="flag-width" alt="flag"> 
                             <span class="align-self-center">&nbsp;English</span>
                         </a>
-                        <a class="dropdown-item d-flex" href="javascript:void(0);">
+                        <!-- <a class="dropdown-item d-flex" href="javascript:void(0);">
                             <img src="rtl/assets/img/flag/spain-flag.png" class="flag-width" alt="flag"> 
                             <span class="align-self-center">&nbsp;Spanish</span>
                         </a>
                         <a class="dropdown-item d-flex" href="javascript:void(0);">
                             <img src="rtl/assets/img/flag/france-flag.png" class="flag-width" alt="flag"> 
                             <span class="align-self-center">&nbsp;French</span>
-                        </a>
+                        </a> -->
                         <a class="dropdown-item d-flex" href="javascript:void(0);">
                             <img src="rtl/assets/img/flag/saudi-arabia-flag.png" class="flag-width" alt="flag"> 
                             <span class="align-self-center">&nbsp;Arabic</span>
