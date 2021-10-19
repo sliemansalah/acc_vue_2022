@@ -1,0 +1,277 @@
+/************************************ Side Bar ****************************/
+
+#sidebar ul.menu-categories li.menu>.dropdown-toggle, #sidebar ul.menu-categories ul.submenu>li a {
+  text-decoration: none;
+}
+
+.main-content {
+  text-align: right;
+}
+
+.breadcrumb a:hover {
+  text-decoration: none;
+}
+
+.el-tree-node__label {
+  padding-right: 10px;
+}
+
+.el-tree-node__children .el-tree-node__content {
+  padding-left: unset !important;
+  padding-right: 18px;
+}
+
+.el-tree-node__children .el-tree-node__children .el-tree-node__content {
+  padding-left: unset !important;
+  padding-right: 36px;
+}
+
+.el-tree-node__children .el-tree-node__children .el-tree-node__children .el-tree-node__content {
+  padding-left: unset !important;
+  padding-right: 54px;
+}
+
+.el-tree-node__children .el-tree-node__children .el-tree-node__children .el-tree-node__children .el-tree-node__content {
+  padding-left: unset !important;
+  padding-right: 72px;
+}
+
+.el-tree-node__children .el-tree-node__children .el-tree-node__children .el-tree-node__children .el-tree-node__children .el-tree-node__content {
+  padding-left: unset !important;
+  padding-right: 90px;
+}
+
+.el-form-item__error {
+  left: unset;
+  right: 0;
+}
+
+.el-notification .el-icon-success, .el-notification .el-icon-error {
+  position: absolute;
+  left: 10px;
+}
+
+@font-face {
+  font-family: "cairo-bold";
+  src: url("../../fonts/Cairo/Cairo-Bold.ttf");
+}
+
+@font-face {
+  font-family: "cairo-regular";
+  src: url("../../fonts/Cairo/Cairo-Regular.ttf");
+}
+
+* {
+  font-family: "cairo-regular";
+  text-align: right;
+  direction: rtl;
+}
+
+.close-details {
+  padding: 8px 10px;
+  background: #3e5170;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-details:hover {
+  background: red;
+}
+
+.el-drawer__body {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.action-table {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.action-table-edit {
+  color: green;
+}
+
+.action-table-details {
+  color: blue;
+}
+
+.action-table-delete {
+  color: red;
+}
+
+.action-table-categories {
+  color: purple;
+}
+
+.action-table-copy {
+  color: purple;
+}
+
+.swal2-html-container {
+  text-align: center;
+}
+
+.modal-header .close {
+  position: absolute;
+  left: 0;
+}
+
+.el-select .el-input__inner {
+  background-color: #fff !important;
+}
+
+.el-input.is-disabled .el-input__inner {
+  background-color: #F5F7FA !important;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.chooseImage {
+  position: relative;
+  bottom: 80px;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-block {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.el-checkbox__label {
+  padding-left: unset !important;
+  padding-right: 10px;
+}
+
+.required {
+  color: #F56C6C;
+  font-weight: bold;
+}
+
+.href {
+  color: #007bff !important;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.href:hover {
+  text-decoration: underline !important;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.has-error {
+  color: #e93d3d;
+}
+
+.has-error .form-control {
+  border: 1px solid #e93d3d;
+}
+
+.el-message-box__headerbtn {
+  right: unset !important;
+  left: 15px;
+}
+
+.el-message-box__status {
+  left: 50%;
+}
+
+.el-message-box__btns button:nth-child(2) {
+  margin-left: unset !important;
+  margin-right: 10px;
+}
+
+.el-select {
+  display: block !important;
+}
+
+.el-notification.top-center {
+  left: 50%;
+  margin-right: 40%;
+}
+
+.el-notification.top-center .el-notification__content p {
+  word-break: break-word;
+}
+
+.pagination {
+  padding-right: 0;
+}
+
+#content {
+  background: #f7f8ff;
+}
+
+.center-block {
+  margin: 0 auto;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.el-select .el-tag {
+  margin: 2px 6px 2px 6px !important;
+}
+
+.el-select .el-tag__close.el-icon-close {
+  right: 5px !important;
+}
+
+.custom-btn1{
+  width:100%;height:45px;font-weight:bold;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.el-drawer__body {
+  overflow-x: hidden;
+}
+
+
+
+.themeDark .modal-content {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.el-select-group__title, .el-select-group .el-select-dropdown__item {
+  padding-left: unset !important;
+  padding-right: 20px !important;
+}
+
+.themeLight .form-control:disabled {
+  background-color: #e7e7e7 !important;
+}
+
+.chooseImage2 {
+  position: relative;
+  bottom: 200px;
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-block2 {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
