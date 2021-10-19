@@ -1,26 +1,26 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Rfof\Seller\Items\Http\Controllers\ItemController;
-use Rfof\Seller\Rating\Http\Controllers\RatingController;
-use Rfof\Seller\Customers\Http\Controllers\CustomerController;
-use Rfof\Seller\Categories\Http\Controllers\CategoryController;
-use Rfof\Admin\ItemTypes\Http\Controllers\ItemTypeController;
-use Rfof\Seller\Coupons\Http\Controllers\CouponController;
-use Rfof\Admin\Countries\Http\Controllers\CountryController;
-use Rfof\Seller\Pages\Http\Controllers\PageController;
-use Rfof\Seller\Orders\Http\Controllers\OrderController;
-use Rfof\Seller\Stores\Http\Controllers\StoreController;
-use Rfof\Seller\ContactUs\Http\Controllers\ContactUsController;
-use Rfof\Admin\Activities\Http\Controllers\ActivityController;
-use Rfof\Admin\Groups\Http\Controllers\GroupController;
-use Rfof\Admin\ContactUs\Http\Controllers\AdminContactUsController;
-use Rfof\Admin\Auth\Http\Controllers\AuthController;
+use Acc\Seller\Items\Http\Controllers\ItemController;
+use Acc\Seller\Rating\Http\Controllers\RatingController;
+use Acc\Seller\Customers\Http\Controllers\CustomerController;
+use Acc\Seller\Categories\Http\Controllers\CategoryController;
+use Acc\Admin\ItemTypes\Http\Controllers\ItemTypeController;
+use Acc\Seller\Coupons\Http\Controllers\CouponController;
+use Acc\Admin\Countries\Http\Controllers\CountryController;
+use Acc\Seller\Pages\Http\Controllers\PageController;
+use Acc\Seller\Orders\Http\Controllers\OrderController;
+use Acc\Seller\Stores\Http\Controllers\StoreController;
+use Acc\Seller\ContactUs\Http\Controllers\ContactUsController;
+use Acc\Admin\Activities\Http\Controllers\ActivityController;
+use Acc\Admin\Groups\Http\Controllers\GroupController;
+use Acc\Admin\ContactUs\Http\Controllers\AdminContactUsController;
+use Acc\Admin\Auth\Http\Controllers\AuthController;
 
 
-Route::post('/login', [\Rfof\Seller\Auth\Http\Controllers\LoginController::class, 'login']);
+Route::post('/login', [\Acc\Seller\Auth\Http\Controllers\LoginController::class, 'login']);
 
-Route::post('seller/store_login', [\Rfof\Seller\Auth\Http\Controllers\LoginController::class, 'storeLogin']);
+Route::post('seller/store_login', [\Acc\Seller\Auth\Http\Controllers\LoginController::class, 'storeLogin']);
 
 
 Route::prefix('seller')->middleware('auth:store')->group(function () {
@@ -122,7 +122,7 @@ Route::prefix('seller')->middleware('auth:store')->group(function () {
     });
 
 
-    Route::post('logout', [\Rfof\Seller\Auth\Http\Controllers\LoginController::class, 'logout']);
+    Route::post('logout', [\Acc\Seller\Auth\Http\Controllers\LoginController::class, 'logout']);
 
 });
 
@@ -164,7 +164,7 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
 
     /** *************** dashboard **************** */
     Route::prefix('dashboard')->group(function () {
-        Route::get('/', [\Rfof\Admin\Auth\Http\Controllers\DashBoardController::class, 'index']);
+        Route::get('/', [\Acc\Admin\Auth\Http\Controllers\DashBoardController::class, 'index']);
     });
 
     /** *************** Groups **************** */
@@ -180,12 +180,12 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
 
     /** *************** Store **************** */
     Route::prefix('store')->group(function () {
-        Route::get('/', [\Rfof\Admin\Stores\Http\Controllers\StoreController::class, 'index']);
-        Route::post('/', [\Rfof\Admin\Stores\Http\Controllers\StoreController::class, 'store']);
-        Route::get('/{id}', [\Rfof\Admin\Stores\Http\Controllers\StoreController::class, 'find']);
-        Route::post('/{id}', [\Rfof\Admin\Stores\Http\Controllers\StoreController::class, 'update']);
-        Route::delete('/', [\Rfof\Admin\Stores\Http\Controllers\StoreController::class, 'destroy']);
-        Route::put('/', [\Rfof\Admin\Stores\Http\Controllers\StoreController::class, 'updateStatus']);
+        Route::get('/', [\Acc\Admin\Stores\Http\Controllers\StoreController::class, 'index']);
+        Route::post('/', [\Acc\Admin\Stores\Http\Controllers\StoreController::class, 'store']);
+        Route::get('/{id}', [\Acc\Admin\Stores\Http\Controllers\StoreController::class, 'find']);
+        Route::post('/{id}', [\Acc\Admin\Stores\Http\Controllers\StoreController::class, 'update']);
+        Route::delete('/', [\Acc\Admin\Stores\Http\Controllers\StoreController::class, 'destroy']);
+        Route::put('/', [\Acc\Admin\Stores\Http\Controllers\StoreController::class, 'updateStatus']);
     });
 
  /** *************** contact **************** */

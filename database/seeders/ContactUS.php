@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Rfof\Domain\Seller\ContactUs\Models\ContcatUs;
+use Acc\Domain\Seller\ContactUs\Models\ContcatUs;
 
 class ContactUS extends Seeder
 {

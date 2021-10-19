@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Rfof\Domain\Seller\Categories\Models\Category;
-use Rfof\Domain\Seller\Countries\Models\Country;
+use Acc\Domain\Seller\Categories\Models\Category;
+use Acc\Domain\Seller\Countries\Models\Country;
 
 class CountriesSeeder extends Seeder
 {

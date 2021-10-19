@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
-use Rfof\Domain\Seller\Coupons\Models\Coupon;
+use Acc\Domain\Seller\Coupons\Models\Coupon;
 
 class CouponsSeeder extends Seeder
 {

@@ -37,10 +37,10 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Rfof\\Admin\\": "rfof/Application/Admin/app",
-            "Rfof\\Seller\\": "rfof/Application/Seller/app",
-            "Rfof\\Auth\\": "rfof/Auth",
-            "Rfof\\Domain\\": "rfof/Domain",
+            "Acc\\Admin\\": "acc/Application/Admin/app",
+            "Acc\\Seller\\": "acc/Application/Seller/app",
+            "Acc\\Auth\\": "acc/Auth",
+            "Acc\\Domain\\": "acc/Domain",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
@@ -50,7 +50,7 @@
             "Tests\\": "tests/"
         },
         "files": [
-            "rfof/Domain/Core/Helper.php"
+            "acc/Domain/Core/Helper.php"
         ]
     },
     "minimum-stability": "dev",

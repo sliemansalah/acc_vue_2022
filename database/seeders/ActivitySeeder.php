@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Rfof\Domain\Admin\Group\Models\Group;
+use Acc\Domain\Admin\Group\Models\Group;
 
 class ActivitySeeder extends Seeder
 {

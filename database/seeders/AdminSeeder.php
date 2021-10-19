@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Rfof\Domain\Admin\Auth\Model\Admin;
+use Acc\Domain\Admin\Auth\Model\Admin;
 
 class AdminSeeder extends Seeder
 {

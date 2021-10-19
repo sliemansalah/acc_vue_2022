@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Rfof\Domain\Seller\Rating\Models\Rating;
+use Acc\Domain\Seller\Rating\Models\Rating;
 
 class RatingSeeder extends Seeder
 {

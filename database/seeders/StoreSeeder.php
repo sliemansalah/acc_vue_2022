@@ -4,8 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Http\UploadedFile;
-use Rfof\Domain\Seller\Stores\Models\Setting;
-use Rfof\Domain\Seller\Stores\Models\Store;
+use Acc\Domain\Seller\Stores\Models\Setting;
+use Acc\Domain\Seller\Stores\Models\Store;
 
 class StoreSeeder extends Seeder
 {

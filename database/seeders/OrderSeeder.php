@@ -3,8 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Rfof\Domain\Seller\Orders\Models\Order;
-use Rfof\Domain\Seller\Orders\Models\OrderItem;
+use Acc\Domain\Seller\Orders\Models\Order;
+use Acc\Domain\Seller\Orders\Models\OrderItem;
 
 class OrderSeeder extends Seeder
 {

@@ -83,11 +83,11 @@ return [
         ],
         'stores' => [
             'driver' => 'eloquent',
-            'model' => \Rfof\Domain\Seller\Stores\Models\Store::class,
+            'model' => \Acc\Domain\Seller\Stores\Models\Store::class,
         ],
         'admins' => [
             'driver' => 'eloquent',
-            'model' => \Rfof\Domain\Admin\Auth\Model\Admin::class,
+            'model' => \Acc\Domain\Admin\Auth\Model\Admin::class,
         ],
         // 'users' => [
         //     'driver' => 'database',

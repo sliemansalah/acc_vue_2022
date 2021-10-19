@@ -5,10 +5,10 @@
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" packagePrefix="App\" />
       <sourceFolder url="file://$MODULE_DIR$/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
       <sourceFolder url="file://$MODULE_DIR$/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
-      <sourceFolder url="file://$MODULE_DIR$/rfof/Application/Admin/app" isTestSource="false" packagePrefix="Rfof\Admin\" />
-      <sourceFolder url="file://$MODULE_DIR$/rfof/Application/Seller/app" isTestSource="false" packagePrefix="Rfof\Seller\" />
-      <sourceFolder url="file://$MODULE_DIR$/rfof/Auth" isTestSource="false" packagePrefix="Rfof\Auth\" />
-      <sourceFolder url="file://$MODULE_DIR$/rfof/Domain" isTestSource="false" packagePrefix="Rfof\Domain\" />
+      <sourceFolder url="file://$MODULE_DIR$/acc/Application/Admin/app" isTestSource="false" packagePrefix="acc\Admin\" />
+      <sourceFolder url="file://$MODULE_DIR$/acc/Application/Seller/app" isTestSource="false" packagePrefix="acc\Seller\" />
+      <sourceFolder url="file://$MODULE_DIR$/acc/Auth" isTestSource="false" packagePrefix="Acc\Auth\" />
+      <sourceFolder url="file://$MODULE_DIR$/acc/Domain" isTestSource="false" packagePrefix="Acc\Domain\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/tests/Feature" isTestSource="true" />

@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Rfof\Domain\Seller\Items\Models\Item;
+use Acc\Domain\Seller\Items\Models\Item;
 
 class ItemSeeder extends Seeder
 {

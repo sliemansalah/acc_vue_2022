@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
-use Rfof\Domain\Seller\Customers\Models\Customer;
+use Acc\Domain\Seller\Customers\Models\Customer;
 
 class CustomerSeeder extends Seeder
 {

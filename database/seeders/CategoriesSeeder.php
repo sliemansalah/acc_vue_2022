@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Rfof\Domain\Seller\Categories\Models\Category;
+use Acc\Domain\Seller\Categories\Models\Category;
 
 class CategoriesSeeder extends Seeder
 {

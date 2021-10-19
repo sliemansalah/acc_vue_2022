@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Rfof\Domain\Seller\Pages\Models\Page;
+use Acc\Domain\Seller\Pages\Models\Page;
 
 class PageSeeder extends Seeder
 {

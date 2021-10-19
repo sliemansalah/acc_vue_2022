@@ -3,8 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Rfof\Domain\Seller\Categories\Models\Category;
-use Rfof\Domain\Seller\Rating\Models\Rating;
 
 class DatabaseSeeder extends Seeder
 {
