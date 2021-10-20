@@ -1,6 +1,11 @@
 <template>
   <div>
-    <h1>hi</h1>
+    <b-table 
+      :fields="fields"
+      :items="items"
+      striped 
+    >
+    </b-table>
   </div>
 </template>
 
@@ -9,6 +14,15 @@ export default {
   name: "areas",
   data() {
     return {
+      fields: [
+        {
+          key: 'name',
+          label: 'الاسم'
+        }
+      ],
+      items: [
+        { name: 'soso' },
+      ]
     };
   },
 };
