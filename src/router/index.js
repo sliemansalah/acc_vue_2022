@@ -5,7 +5,8 @@ import Router from 'vue-router'
 const TheContainer = () => import('@/containers/TheContainer')
 
 // Views
-const Areas = () => import('@/views/pages/Areas');
+const ListAreas = () => import('@/views/pages/areas/ListAreas');
+const AddEditArea = () => import('@/views/pages/areas/AddEditArea');
 
 Vue.use(Router)
 
@@ -21,14 +22,19 @@ function configRoutes () {
     {
       path: '/',
       redirect: '/areas',
-      name: 'الرئيسية',
+      name: 'container',
       component: TheContainer,
       children: [
         {
           path: 'areas',
-          name: 'المناطق',
-          component: Areas
+          name: 'listAreas',
+          component: ListAreas,
         },
+        {
+          path: 'areas/addEdit',
+          name: 'addEditArea',
+          component: AddEditArea
+        }
       ]
     }
   ]
