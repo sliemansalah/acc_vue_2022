@@ -25,13 +25,14 @@
         :to="to"
         :target="target" >
           <vs-icon v-if="!featherIcon" :icon-pack="iconPack" :icon="icon" />
-          <feather-icon v-else :class="{'w-3 h-3': iconSmall}" :icon="icon" />
+          <component :is="icon" :class="'mr-2'"></component>
           <slot />
       </router-link>
 
       <a v-else :target="target" :href="href" tabindex="-1">
         <vs-icon v-if="!featherIcon" :icon-pack="iconPack" :icon="icon" />
-        <feather-icon v-else :class="{'w-3 h-3': iconSmall}" :icon="icon" />
+        <component :is="icon" :class="{'w-3 h-3': iconSmall}"></component>
+        <!-- <feather-icon v-else :class="{'w-3 h-3': iconSmall}" :icon="icon" /> -->
         <slot />
       </a>
   </div>
@@ -50,8 +51,8 @@ export default {
     index       : { type: [String, Number],       default: null             },
     featherIcon : { type: Boolean,                default: true             },
     target      : { type: String,                 default: '_self'          },
-    isDisabled  : { type: Boolean,                default: false            }
-  },
+    isDisabled  : { type: Boolean,                default: false            },
+    },
   computed: {
     canSee () {
       this.$acl.check(this.$store.state.AppActiveUser.userRole)

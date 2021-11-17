@@ -56,7 +56,7 @@
 
             <li class="auto-suggest__suggestion-group__suggestion py-3 px-4 no-results" v-if="!suggestion_list.length && searchQuery">
               <slot name="noResult" :group_name="grp_name">
-                  <p>No Results Found.</p>
+                  <p>{{$t('NoResultsFound')}}</p>
               </slot>
             </li>
           </ul>

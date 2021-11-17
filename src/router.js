@@ -27,8 +27,20 @@ const router = new Router({
         // =============================================================================
         {
           path: '/',
-          redirect: '/dashboard/analytics'
+          redirect: '/system-constants/settings'
         },
+
+
+        {
+          path: '/system-constants/settings',
+          name: 'systemConstantsSettings',
+          component: () => import('./views/ourPages/systemConstants/SettingsPage'),
+          meta: {
+            rule: 'editor'
+          }
+        },
+
+
         {
           path: '/dashboard/analytics',
           name: 'dashboard-analytics',
