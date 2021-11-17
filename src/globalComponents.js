@@ -8,8 +8,6 @@ import FeatherIcon  from './components/FeatherIcon.vue'
 import VxInputGroup  from './components/vx-input-group/VxInputGroup.vue'
 
 
-
-
 Vue.component(VxTooltip.name, VxTooltip)
 Vue.component(VxCard.name, VxCard)
 Vue.component(VxList.name, VxList)
@@ -48,3 +46,5 @@ Vue.component(vSelect)
 
 import SettingsIcon  from '@/icons/SettingsIcon.vue';
 Vue.component('SettingsIcon', SettingsIcon);
+
+
