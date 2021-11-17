@@ -1,13 +1,3 @@
-<!-- =========================================================================================
-  File Name: App.vue
-  Description: Main vue file - APP
-  ----------------------------------------------------------------------------------------
-  Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
-  Author: Pixinvent
-  Author URL: http://www.themeforest.net/user/pixinvent
-========================================================================================== -->
-
-
 <template>
   <div id="app" :class="vueAppClasses">
     <router-view @setAppClasses="setAppClasses" />
@@ -50,7 +40,6 @@ export default {
     },
     handleWindowResize () {
       this.$store.commit('UPDATE_WINDOW_WIDTH', window.innerWidth)
-
       // Set --vh property
       document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`)
     },

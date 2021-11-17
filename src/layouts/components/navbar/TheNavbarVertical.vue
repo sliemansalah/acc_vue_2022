@@ -23,13 +23,13 @@
 
         <vs-spacer />
 
-        <i18n />
+        <!-- <i18n /> -->
 
-        <search-bar />
+        <!-- <search-bar /> -->
 
-        <cart-drop-down />
+        <!-- <cart-drop-down /> -->
 
-        <notification-drop-down />
+        <!-- <notification-drop-down /> -->
 
         <profile-drop-down />
 
@@ -41,10 +41,10 @@
 
 <script>
 import Bookmarks            from './components/Bookmarks.vue'
-import I18n                 from './components/I18n.vue'
-import SearchBar            from './components/SearchBar.vue'
-import CartDropDown         from './components/CartDropDown.vue'
-import NotificationDropDown from './components/NotificationDropDown.vue'
+// import I18n                 from './components/I18n.vue'
+// import SearchBar            from './components/SearchBar.vue'
+// import CartDropDown         from './components/CartDropDown.vue'
+// import NotificationDropDown from './components/NotificationDropDown.vue'
 import ProfileDropDown      from './components/ProfileDropDown.vue'
 
 export default {
@@ -57,10 +57,10 @@ export default {
   },
   components: {
     Bookmarks,
-    I18n,
-    SearchBar,
-    CartDropDown,
-    NotificationDropDown,
+    // I18n,
+    // SearchBar,
+    // CartDropDown,
+    // NotificationDropDown,
     ProfileDropDown
   },
   computed: {

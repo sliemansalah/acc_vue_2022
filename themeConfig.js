@@ -18,7 +18,7 @@ export const colors = {
 
 // CONFIGS
 const themeConfig = {
-  disableCustomizer : false,       // options[Boolean] : true, false(default)
+  disableCustomizer : true,       // options[Boolean] : true, false(default)
   disableThemeTour  : true,        // options[Boolean] : true, false(default)
   footerType        : 'static',    // options[String]  : static(default) / sticky / hidden
   hideScrollToTop   : false,       // options[Boolean] : true, false(default)
@@ -26,7 +26,7 @@ const themeConfig = {
   navbarColor       : '#fff',      // options[String]  : HEX color / rgb / rgba / Valid HTML Color name - (default: #fff)
   navbarType        : 'floating',  // options[String]  : floating(default) / static / sticky / hidden
   routerTransition  : 'zoom-fade', // options[String]  : zoom-fade / slide-fade / fade-bottom / fade / zoom-out / none(default)
-  rtl               : false,       // options[Boolean] : true, false(default)
+  rtl               : true,       // options[Boolean] : true, false(default)
   sidebarCollapsed  : false,       // options[Boolean] : true, false(default)
   theme             : 'light',     // options[String]  : "light"(default), "dark", "semi-dark"
 

@@ -3,7 +3,8 @@
 
     <div class="text-right leading-tight hidden sm:block">
       <p class="font-semibold">{{ activeUserInfo.displayName }}</p>
-      <small>Available</small>
+      <div class="h-3 w-3 mt-1 rounded-full bg-success float-right"></div>
+      <small class="mr-1 ml-1">{{$t('Available')}}</small>
     </div>
 
     <vs-dropdown vs-custom-content vs-trigger-click class="cursor-pointer">
