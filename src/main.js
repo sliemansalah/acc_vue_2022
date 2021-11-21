@@ -7,10 +7,6 @@ import 'material-icons/iconfont/material-icons.css' //Material Icons
 import 'vuesax/dist/vuesax.css' // Vuesax
 Vue.use(Vuesax)
 
-// axios
-import axios from './axios.js'
-Vue.prototype.$http = axios
-
 // Theme Configurations
 import '../themeConfig.js'
 
@@ -33,7 +29,7 @@ import router from './router'
 import store from './store/store'
 
 // i18n
-import i18n from './i18n/i18n'
+import i18n from './language/lang'
 
 // Clipboard
 import VueClipboard from 'vue-clipboard2'
@@ -43,11 +39,6 @@ Vue.use(VueClipboard)
 import VueTour from 'vue-tour'
 Vue.use(VueTour)
 require('vue-tour/dist/vue-tour.css')
-
-
-// VeeValidate
-import VeeValidate from 'vee-validate'
-Vue.use(VeeValidate)
 
 
 // Google Maps
@@ -74,10 +65,43 @@ import 'prismjs/themes/prism-tomorrow.css'
 require('./assets/css/iconfont.css')
 Vue.config.productionTip = false
 
+
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
+
+import VeeValidate from 'vee-validate';
+import arabic from './language/vee-validate/locale/ar.js'
+import english from './language/vee-validate/locale/en.js'
+Vue.use(VeeValidate, {
+  fieldsBagName: 'veeFields',
+  i18nRootKey: 'validations', // customize the root path for validation messages.
+  i18n,
+  dictionary: {
+   ar:arabic,
+   en:english
+  }
+});
+
+import config from "./config";
+
+
+import axios from 'axios';
+window.axios = axios.create({
+  baseURL: config.hostUrl
+});
+window.axios.defaults.headers.lang = config.lang;
+if(config.token) {
+  window.axios.defaults.headers.common = { 'Authorization': `Bearer ${config.token}` }
+}
+
+
+import mixin from  "./mixin";
 new Vue({
   router,
   store,
   i18n,
   acl,
+  mixins: [mixin],
   render: h => h(App)
 }).$mount('#app')

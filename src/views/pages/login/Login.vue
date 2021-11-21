@@ -1,57 +1,109 @@
-<!-- =========================================================================================
-    File Name: Login.vue
-    Description: Login Page
-    ----------------------------------------------------------------------------------------
-    Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
-      Author: Pixinvent
-    Author URL: http://www.themeforest.net/user/pixinvent
-========================================================================================== -->
-
-
 <template>
-  <div class="h-screen flex w-full bg-img vx-row no-gutter items-center justify-center" id="page-login">
-    <div class="vx-col sm:w-1/2 md:w-1/2 lg:w-3/4 xl:w-3/5 sm:m-0 m-4">
-      <vx-card>
-        <div slot="no-body" class="full-page-bg-color">
+  <div style="margin-top:100px;margin-right:100px;margin-left:100px;">
+      <el-card>
+        <div class="mb-4 text-center">
+          <img width="300" height="150" src="/assets/images/logo.png" alt="" />
+        </div>
+        <div class="row">
+          <h3 class="text-center text-uppercase mb-4">{{ $t("Login") }}</h3>
+          <hr />
+        </div>
 
-          <div class="vx-row no-gutter justify-center items-center">
-
-            <div class="vx-col hidden lg:block lg:w-1/2">
-              <img src="@/assets/images/pages/login.png" alt="login" class="mx-auto">
-            </div>
-
-            <div class="vx-col sm:w-full md:w-full lg:w-1/2 d-theme-dark-bg">
-              <div class="px-8 pt-8 login-tabs-container">
-
-                <div class="vx-card__title mb-4">
-                  <h4 class="mb-4">Login</h4>
-                  <p>Welcome back, please login to your account.</p>
+        <el-row>
+            <el-col :md="10" :offset="7">
+              <div
+                class="form-group"
+                :class="{ 'has-error': errors.has('addEditValidation.email') }"
+              >
+                <h4 class="mb-3">{{ $t("Email") }} <span class="required">*</span></h4>
+                <el-input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  v-model="object.email"
+                  v-validate="'required|email'"
+                  data-vv-scope="addEditValidation"
+                  :data-vv-as="$t('Email')"
+                />
+                <div
+                  class="help-block"
+                  v-if="errors.has('addEditValidation.email')"
+                >
+                  {{ errors.first("addEditValidation.email") }}
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </vx-card>
-    </div>
+            </el-col>
+            
+        </el-row>
+
+         <el-row class="mt-3">
+            <el-col :md="10" :offset="7">
+              <div
+                class="form-group"
+                :class="{ 'has-error': errors.has('addEditValidation.password') }"
+              >
+                <h4 class="mb-3">{{ $t("Password") }} <span class="required">*</span></h4>
+                <el-input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  v-model="object.password"
+                  v-validate="'required'"
+                  data-vv-scope="addEditValidation"
+                  :data-vv-as="$t('Password')"
+                />
+                <div
+                  class="help-block"
+                  v-if="errors.has('addEditValidation.password')"
+                >
+                  {{ errors.first("addEditValidation.password") }}
+                </div>
+              </div>
+            </el-col>
+            
+        </el-row>
+
+        <el-row class="mt-3">
+            <el-col :md="10" :offset="7">
+              <el-button @click="login" style="width:100%;" type="primary">{{ $t("Login") }}</el-button>
+            </el-col>
+            
+        </el-row>
+
+      </el-card>
   </div>
 </template>
 
-
 <script>
 export default {
-}
+  data() {
+    return {
+      object: {
+        email: "",
+        password: "",
+      },
+    };
+  },
+  methods: {
+    login() {
+      this.$validator.validateAll("addEditValidation").then((valid) => {
+        if (valid) {
+          this.$store
+            .dispatch("auth/login", this.object)
+            .then((result) => {
+              this.$root.notifySuccess("Login", result);
+              this.$root.loginSuccess(result);
+            })
+            .catch((error) => {
+              console.log(error);
+              this.$root.notifyError("Login", error);
+            });
+        }
+      });
+    },
+  },
+};
 </script>
 
-<style lang="scss">
-.login-tabs-container {
-  min-height: 505px;
-
-  .con-tab {
-    padding-bottom: 14px;
-  }
-
-  .con-slot-tabs {
-    margin-top: 1rem;
-  }
-}
+<style>
 </style>

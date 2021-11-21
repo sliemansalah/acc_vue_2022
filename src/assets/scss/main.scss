@@ -16,3 +16,18 @@
 @import "vuexy/rtl";
 
 @import "vuexy/custom";
+
+
+
+.has-error {
+    .el-input {
+        border: 1px solid #e63a3a;
+        border-radius: 5px;
+    }
+    .help-block {
+        color: #e63a3a;
+    }
+}
+.required {
+    color: #e63a3a;
+}
