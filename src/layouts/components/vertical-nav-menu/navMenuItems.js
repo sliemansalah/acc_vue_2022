@@ -1,7 +1,7 @@
 
 export default [
   {
-    url: '/',
+    url: '/ss',
     name: 'home',
     slug: 'home',
     icon: 'SettingsIcon',
@@ -16,7 +16,7 @@ export default [
     i18n: 'SystemConstants',
     submenu: [
       {
-        url: '/system-constants/settings',
+        url: '/pages/system-constants/settings',
         name: 'settings',
         slug: 'settings',
         i18n: 'Settings'

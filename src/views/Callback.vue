@@ -26,8 +26,7 @@ export default {
     }
   },
   created () {
-    this.$auth.handleAuthentication()
-    if (this.$auth.isAuthenticated()) this.$router.push('/').catch(() => {})
+    this.$router.push('/').catch(() => {})
   }
 }
 

@@ -4,7 +4,7 @@ export default {
     key: "title",
     data: [
         // DASHBOARDS
-        {title: "إعدادات النظام",        url: "/system-constants/settings",                icon: "SettingsIcon",           is_bookmarked: true},
+        {title: "إعدادات النظام",        url: "/pages/system-constants/settings",                icon: "SettingsIcon",           is_bookmarked: true},
     ]
     // data: [
     //   // DASHBOARDS
