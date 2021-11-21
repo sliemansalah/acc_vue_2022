@@ -31,8 +31,9 @@
 
           <!-- Logo -->
           <router-link tag="div" class="vx-logo cursor-pointer flex items-center" to="/">
-            <logo class="w-10 mr-4 fill-current text-primary" />
-            <span class="vx-logo-text text-primary" v-show="isMouseEnter || !reduce" v-if="title">{{ $t(title) }}</span>
+          <img class="fill-current text-primary" width="190" src="/assets/images/logo.png" />
+            <!-- <logo class="w-10 mr-4 fill-current text-primary" /> -->
+            <!-- <span class="vx-logo-text text-primary" v-show="isMouseEnter || !reduce" v-if="title">{{ $t(title) }}</span> -->
           </router-link>
           <!-- /Logo -->
 
@@ -48,7 +49,7 @@
               <feather-icon
                 id="btnVNavMenuMinToggler"
                 class="mr-0 cursor-pointer"
-                :icon="reduce ? '' : 'DiscIcon'"
+                :icon="reduce ? 'DiscIcon' : 'DiscIcon'"
                 svg-classes="stroke-current text-primary"
                 @click="toggleReduce(!reduce)" />
             </template>
