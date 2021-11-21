@@ -12,7 +12,8 @@
     <vx-card title="With Badge" code-toggler>
 
         <p>You can add a notification label to the avatar, either a reference point or a number with the property <code>badge</code></p>
-        <p>You could also change the badge's color by using the property <code>badge-color</code>. You are able to use the <router-link to="/ui-elements/colors">Main Colors</router-link> or <strong>RGB</strong> and <strong>HEX</strong> colors.</p>
+        <p>You could also change the badge's color by using the property <code>badge-color</code>. You are able to use the 
+         or <strong>RGB</strong> and <strong>HEX</strong> colors.</p>
 
         <vs-alert icon="warning" active="true" color="warning" class="mt-5">
             <span>Only <strong>RGB</strong> and <strong>HEX</strong> colors are supported.</span>

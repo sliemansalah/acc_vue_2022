@@ -48,7 +48,7 @@
               <feather-icon
                 id="btnVNavMenuMinToggler"
                 class="mr-0 cursor-pointer"
-                :icon="reduce ? 'CircleIcon' : 'DiscIcon'"
+                :icon="reduce ? '' : 'DiscIcon'"
                 svg-classes="stroke-current text-primary"
                 @click="toggleReduce(!reduce)" />
             </template>

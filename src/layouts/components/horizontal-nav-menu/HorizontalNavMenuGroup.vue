@@ -16,7 +16,7 @@
           <!-- Group Icon -->
           <feather-icon
             v-if        = "group.icon  || (this.groupIndex > Math.floor(this.groupIndex))"
-            :icon       = "group.icon  || 'CircleIcon'"
+            :icon       = "group.icon"
             :svgClasses = "iconClasses" />
 
           <!-- Group Name -->
@@ -117,9 +117,9 @@ export default {
     },
     itemIcon () {
       // return (index) => {
-      //   // if (!((index.match(/\./g) || []).length > 1)) return "CircleIcon"
+      //   // if (!((index.match(/\./g) || []).length > 1)) return ""
       // }
-      return 'CircleIcon'
+      return ''
     },
     isGroupActive () {
       return (item) => {
